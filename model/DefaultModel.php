@@ -1,6 +1,6 @@
 <?php
 
-class DefaultModel {
+class DefaultModel extends Db{
 
    /**
      * The collection of objects required everywhere
@@ -16,7 +16,8 @@ class DefaultModel {
     public function __construct($app)
     {
         $this->app = $app;
-        $this->db = new Db(DBCONNECTION, DBUSER, DBPASSWORD);
+        #$this->db = new Db(DBCONNECTION, DBUSER, DBPASSWORD);
+        parent::__construct($app->connections);
     }
     
 }

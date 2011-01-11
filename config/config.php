@@ -11,4 +11,8 @@ define('DBCONNECTION', "mysql:host=localhost;dbname=framework");
 define('DBUSER', "root");
 define('DBPASSWORD', "");
 
+define('DBCONNECTION1', "mysql:host=localhost;dbname=manfin");
+define('DBUSER1', "root");
+define('DBPASSWORD1', "");
+
 ?>

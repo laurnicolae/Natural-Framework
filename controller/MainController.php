@@ -20,7 +20,7 @@ class Main extends DefaultController{
     public function index($parameters = array()){
 
         //receiving data from model
-        $data = $this->m->getAll();
+        $data = $this->m->getAll('main');
         
         //sending data to the view
         $this->app->view->title = "Page title";
@@ -31,10 +31,8 @@ class Main extends DefaultController{
     
     public function add()
     {
-
         
         //sending data to the view
-        $this->app->view->data = $data;
         $this->app->view->title = "Page title";
         $this->app->view->show('main/create');
     }
@@ -42,7 +40,7 @@ class Main extends DefaultController{
     public function show()
     {
         //receiving data from model
-        $data = $this->m->getOne($_GET['id']);
+        $data = $this->m->getOne('main', $_GET['id']);
         
         //sending data to the view
         $this->app->view->data = $data;
