@@ -10,11 +10,12 @@ class DefaultController {
      * The collection of objects
      * @var object
      */
-    public $app;
+    protected $app;
 
     public function __construct($app)
     {
         $this->app = $app;
     }
+    
 }
 ?>

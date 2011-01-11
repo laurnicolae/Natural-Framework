@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The registry pattern - all methods of the framework
+ * The registry pattern - all functions of the framework
  *
  */
 class App {

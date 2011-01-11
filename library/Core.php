@@ -64,13 +64,16 @@ class Core
         $controllerPath = FILES_PATH.'/';
         if(!empty($module))
         {
-            $controllerPath.= $module.'/';
+            #$controllerPath.= $module.'/';
+            $controllerPath.= 'controller/'.$module.'/'.$controller.'Controller.php';
+        }else{
+            $controllerPath.= 'controller/'.$controller.'Controller.php';
         }
-        $controllerPath.= 'controller/'.$controller.'Controller.php';
         if(is_readable($controllerPath) == false){
-            $controllerPath.= 'error404';
+            $controllerPath = 'controller/Error404Controller.php';
+            $controller = 'Error404';
         }
-
+        
         //include the controller file
         include($controllerPath);
 
@@ -81,5 +84,7 @@ class Core
          $controller->$action($parts);
         
     }
+    
+    
 }
 ?>

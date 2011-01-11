@@ -17,14 +17,14 @@ if (function_exists('__autoload')) {
 /*** a new app object ***/
 $app = new App;
 
+
+
 $app->router = new Core($app);
 
-$app->view = new View();
-$app->view->setTemplateDir(TEMPLATEDIR);
+$app->view = new View($app);
 
 $app->router->includeController();
 
-$app->authentication = new Authentication($app);
-
+#$app->authentication = new Authentication($app);
 
 ?>

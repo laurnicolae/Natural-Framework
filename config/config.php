@@ -7,6 +7,8 @@ define('DEFAULT_CONTROLLER', 'Main');
 //the default action, if not specified
 define('DEFAULT_ACTION', 'index');
 
-//smarty template directory
-define('TEMPLATEDIR', FILES_PATH.'/view');
+define('DBCONNECTION', "mysql:host=localhost;dbname=framework");
+define('DBUSER', "root");
+define('DBPASSWORD', "");
+
 ?>
