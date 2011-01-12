@@ -3,5 +3,8 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title><?php echo $title; ?></title>
-  </head>
-  <body>
+  <link href="<?=BASE_URL?>/public/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="center">
+<div id="wrapper">
