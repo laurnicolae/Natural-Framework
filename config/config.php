@@ -15,4 +15,7 @@ define('DBCONNECTION1', "mysql:host=localhost;dbname=manfin");
 define('DBUSER1', "root");
 define('DBPASSWORD1', "");
 
+//smarty template directory
+define('TEMPLATEDIR', FILES_PATH.'/view');
+
 ?>

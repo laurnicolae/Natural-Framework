@@ -23,10 +23,10 @@ class Main extends DefaultController{
         $data = $this->m->getAll('main');
         
         //sending data to the view
-        $this->app->view->title = "Page title";
+        $this->view->assign('title', 'Page title');
 
-        $this->app->view->data = $data;
-        $this->app->view->show('main/index');
+        $this->view->assign('data', $data);
+        $this->view->display('main/index.tpl');
     }
     
     public function add()

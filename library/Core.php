@@ -76,11 +76,6 @@ class Core
         
         //include the controller file
         include($controllerPath);
-
-        //send controller name to the view
-        $this->app->view->controller = $controller;
-        //send action name to the view
-        $this->app->view->action = $action;
         
         //instantialize the controller class
         $controller = new $controller($this->app);

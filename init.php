@@ -19,13 +19,13 @@ $app = new App;
 
 $app->router = new Core($app);
 
-$app->view = new View($app);
+#$app->view = new View($app);
 
 //db1
 //last parameter shows if it is the default connection
 $connections['framework'] = array(DBCONNECTION, DBUSER, DBPASSWORD, '1');
 //db2
-$connections['manfin']    = array(DBCONNECTION1, DBUSER1, DBPASSWORD1);
+#$connections['manfin']    = array(DBCONNECTION1, DBUSER1, DBPASSWORD1);
 $app->connections = $connections;
 
 $app->router->includeController();
