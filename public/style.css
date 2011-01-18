@@ -13,3 +13,7 @@ body{background:#ccc;}
 
 table{width:100%; float:left; border:1px solid #ccc;}
 table td, table th{border:1px solid #ccc;}
+
+.error{border:1px solid #ff0000;}
+.error span{width:100%; float:left; color:#ff0000; margin: 0 0 5px 0; display:inline; font-weight:bold;}
+#form .row{width:99%; float:left; margin:10px 0 0 0; display:inline; padding:5px;}

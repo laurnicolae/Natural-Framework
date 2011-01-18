@@ -1,5 +1,3 @@
-<?php require_once(FILES_PATH.'/view/head.php'); ?>
-    
+{include file='header.tpl'}
 <p>Page not found.</p>
-
-<?php require_once(FILES_PATH.'/view/footer.php'); ?>
+{include file='footer.tpl'}

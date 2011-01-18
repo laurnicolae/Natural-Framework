@@ -1,11 +1,11 @@
-<?php require_once(FILES_PATH.'/view/header.php'); ?>
+{include file='header.tpl'}
 
-<p><?php echo $data[0]['camp1']; ?></p>
-<p><?php echo $data[0]['camp2']; ?></p>
-<p><?php echo $data[0]['camp3']; ?></p>
-<p><?php echo $data[0]['camp4']; ?></p>
-<?php echo "<a href='".BASE_URL."/main/edit?id=".$_GET['id']."'>Edit</a>"; ?>
+<p>{$data[0]['camp1']}</p>
+<p>{$data[0]['camp2']}</p>
+<p>{$data[0]['camp3']}</p>
+<p>{$data[0]['camp4']}</p>
+<a href='{$base_url}/main/edit?id={$id}'>Edit</a>
 
-<?php echo "<a href='".BASE_URL."/main/delete?id=".$_GET['id']."'>Delete</a>"; ?>
+<a href='{$base_url}/main/delete?id={$id}'>Delete</a>
 
-<?php require_once(FILES_PATH.'/view/footer.php'); ?>
+{include file='footer.tpl'}

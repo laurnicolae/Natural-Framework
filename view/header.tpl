@@ -8,3 +8,7 @@
 <body>
 <div id="center">
 <div id="wrapper">
+{include file='menu.tpl' cache_lifetime=500}
+{if isset($notification)}
+    <div class="notification"><p>{$notification}</p></div>
+{/if}

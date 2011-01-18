@@ -25,7 +25,8 @@ class DefaultController {
         $this->app = $app;
         $this->view = new Smarty();
         $this->view->setTemplateDir(TEMPLATEDIR);
-        $this->view->setCaching(true);
+        $this->view->setCaching(false);
+        $this->view->debugging = false;
         $this->view->assign('base_url', BASE_URL);
     }
     

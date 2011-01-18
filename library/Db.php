@@ -61,6 +61,7 @@ class Db {
     public function exec($sql, $connection='default')
     {
         $affectedRows = $this->connection[$connection]->exec($sql);
+        return $affectedRows;
     }
 
     /**
@@ -85,14 +86,14 @@ class Db {
 
             $sql = "INSERT INTO $table (".$keys.") VALUES ($values)";
             $prepared = $this->connection[$connection]->prepare($sql);
-            $affectedrows = $prepared->execute(array_values($data));
+            $affectedRows = $prepared->execute(array_values($data));
         }else{
             $keys = implode(" = ?, ", array_keys($data));
             $keys.= " = ?";
             $sql = "UPDATE $table SET ".$keys." WHERE id = ".$id."";
             
             $prepared = $this->connection[$connection]->prepare($sql);
-            $affectedrows = $prepared->execute(array_values($data));
+            $affectedRows = $prepared->execute(array_values($data));
         }
         return $affectedRows;
     }
@@ -118,6 +119,19 @@ class Db {
     {
         $data = $this->query("SELECT * FROM main WHERE id=".$id." ORDER BY id DESC");
         return $data;
+    }
+
+    /**
+     * Delete a row from a specific table
+     * @param string $table
+     * @param integer $id
+     * @return integer or false
+     */
+    public function delete($table, $id)
+    {
+        $query = "DELETE FROM $table WHERE id=".$id."";
+        $affectedRows = $this->exec($query);
+        return $affectedRows;
     }
 }
 ?>

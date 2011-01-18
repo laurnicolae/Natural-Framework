@@ -1,21 +1,22 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2011-01-18 13:13:05
+<?php /* Smarty version Smarty-3.0.6, created on 2011-01-18 17:58:06
          compiled from "D:\xampp\htdocs\framework/view\main/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:49044d3575c1b305b3-91623011%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:298834d35b7f76df995-10680102%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb49229e89633828daced153d00007290665aa2a' => 
     array (
       0 => 'D:\\xampp\\htdocs\\framework/view\\main/index.tpl',
-      1 => 1295348967,
+      1 => 1295366258,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '49044d3575c1b305b3-91623011',
+  'nocache_hash' => '298834d35b7f76df995-10680102',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
+  'cache_lifetime' => 3600,
+  'has_nocache_code' => true,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_function_cycle')) include 'D:\xampp\htdocs\framework\library\Smarty\plugins\function.cycle.php';
 ?><?php $_template = new Smarty_Internal_Template('header.tpl', $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null);

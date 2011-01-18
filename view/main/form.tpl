@@ -1,36 +1,36 @@
-<form method="post" action="<?=BASE_URL?>/<?=$controller?>/<?php if($action=='add'){echo 'create';}elseif($action=='edit'){echo 'update';} ?>"">
-  <input type="hidden" name="id" value="<?php if(isset($data[0]['id'])) echo $data[0]['id'] ?>">
+<form id="form" method="post" action="{$base_url}/{$controller}/{if $action=='add'}create{elseif $action=='edit'}update{/if}">
+  <input type="hidden" name="id" value="{if isset($data[0]['id'])}{$data[0]['id']}{/if}" />
   
-  <span id="camp1" <?if(isset($error['camp1'])){echo "class='error'";}?>
-    <?php if(isset($error['camp1'])){?>
-       <span><?=$error['camp1']?></span>    
-    <?php } ?>
+  <span class='row{if isset($error['camp1'])} error{/if}'>
+    {if isset($error['camp1'])}
+       <span>{$error['camp1']}</span>    
+    {/if}
     <label>Camp1</label>
-    <input type="text" name="camp1" value="<?php if(isset($data[0]['camp1'])) echo $data[0]['camp1'] ?>">
+    <input type="text" name="camp1" value="{if isset($data[0]['camp1'])}{$data[0]['camp1']}{/if}" />
   </span>
   
-  <span id="camp2" <?if(isset($error['camp2'])){echo "class='error'";}?>
-    <?php if(isset($error['camp2'])){?>
-       <span><?=$error['camp2']?></span>    
-    <?php } ?>
+  <span class='row{if isset($error['camp2'])} error{/if}'>
+    {if isset($error['camp2'])}
+       <span>{$error['camp2']}</span>    
+    {/if}
     <label>Camp2</label>
-    <input type="text" name="camp2" value="<?php if(isset($data[0]['camp2'])) echo $data[0]['camp2'] ?>">
+    <input type="text" name="camp2" value="{if isset($data[0]['camp2'])}{$data[0]['camp2']}{/if}" />
   </span>
   
-  <span id="camp3" <?if(isset($error['camp3'])){echo "class='error'";}?>
-    <?php if(isset($error['camp3'])){?>
-       <span><?=$error['camp3']?></span>    
-    <?php } ?>
+  <span class='row{if isset($error['camp3'])} error{/if}'>
+    {if isset($error['camp3'])}
+       <span>{$error['camp3']}</span>    
+    {/if}
     <label>Camp3</label>
-    <input type="text" name="camp3" value="<?php if(isset($data[0]['camp3'])) echo $data[0]['camp3'] ?>">
+    <input type="text" name="camp3" value="{if isset($data[0]['camp3'])}{$data[0]['camp3']}{/if}" />
   </span>
   
-  <span id="camp4" <?if(isset($error['camp4'])){echo "class='error'";}?>
-    <?php if(isset($error['camp4'])){?>
-       <span><?=$error['camp4']?></span>    
-    <?php } ?>
+  <span class='row{if isset($error['camp4'])} error{/if}'>
+    {if isset($error['camp4'])}
+       <span>{$error['camp4']}</span>    
+    {/if}
     <label>Camp4</label>
-    <input type="text" name="camp4" value="<?php if(isset($data[0]['camp4'])) echo $data[0]['camp4'] ?>">
+    <input type="text" name="camp4" value="{if isset($data[0]['camp4'])}{$data[0]['camp4']}{/if}" />
   </span>
   
   <input type="submit" value="Send" />
